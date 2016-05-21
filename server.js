@@ -10,19 +10,11 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-// TODO: Add wannabe
-var plans = [
-  {
-    id: 'droid',
-    title: 'Pacote Droid 1',
-    desc: 'Estamos Perdidos! beep? beep beep?! Bleep Blop Blep! Zeep zip smap Smap smeep!'
-  },
-  {
-    id: 'jedi',
-    title: 'Pacore Jedi',
-    desc: 'Droid, por favor! Um-quarto de porção... O lixo vai servir! Fffkrrshhzz.. Woom..woooom..'
-  }
-];
+// TODO: Add wannabe var plans = [   {     id: 'droid',     title: 'Pacote
+Droid 1',     desc: 'Estamos Perdidos! beep? beep beep?! Bleep Blop Blep! Zeep
+zip smap Smap smeep!'   },   {     id: 'jedi',     title: 'Pacote Jedi',
+desc: 'Droid, por favor! Um-quarto de porção... O lixo vai servir!
+Fffkrrshhzz.. Woom..woooom..'   } ];
 
 app.get('/', function(req, res) {
   res.render('index', { plans: plans });
